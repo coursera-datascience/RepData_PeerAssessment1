@@ -38,7 +38,7 @@ dev.off()
 ```
 
 ## What is the average daily activity pattern?
-Overall, activity starts to increase right after the interval 500 (early  morning, around after 5am). Activity peaks at the interval at 835 (during the moring commute, around 8:35am), and ramins relatively high until around the interval 1900 (early evening, around 7pm) with some fluctuation. After then, activity decreases continuously.
+Overall, activity starts to increase right after the interval 500 (early  morning, around after 5am). Activity peaks at the interval at 835 (moring commute, around 8:35am), and ramins relatively high until around the interval 1900 (early evening, around 7pm) with some fluctuation. After then, activity decreases continuously.
 ```{r echo = TRUE}
 # Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 avg_steps_every_5min <- with(subset(activity, !is.na(steps)), aggregate(steps ~ interval, FUN=mean))
@@ -47,7 +47,6 @@ with(avg_steps_every_5min, plot(interval, steps, type="l"))
 # Export the time series plot as a png file
 png(filename="PA1_plot2.png", width=480, height=480)
 plot(avg_steps_every_5min$interval, avg_steps_every_5min$steps, type="l", xlab="Interval", ylab="Steps")
-legend("topright", c("mean","median"), lty=c(1,1), col=c("red","blue"), cex=0.9)
 dev.off()
 
 # Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
