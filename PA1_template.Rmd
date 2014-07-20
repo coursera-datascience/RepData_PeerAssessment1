@@ -5,8 +5,6 @@ output:
     keep_md: true
 ---
 
-# Reproducible Research: Peer Assessment 1
-
 ## Loading and preprocessing the data
 ```{r echo = TRUE}
 # Read a csv file
@@ -36,7 +34,7 @@ abline(v=mean_total_steps_per_day, lwd=2, col="red")
 abline(v=median_total_steps_per_day, lwd=2, col="blue", lty="dashed")
 
 # Export the histogram as a png file
-dev.copy(png, file="figures/PA1_plot1.png", width=480, height=480, bg="white")
+dev.copy(png, file="figures/PA1_plot1.png", width=480, height=480)
 dev.off()
 ```
 
@@ -48,7 +46,7 @@ avg_steps_every_5min <- with(subset(activity, !is.na(steps)), aggregate(steps ~ 
 with(avg_steps_every_5min, plot(interval, steps, type="l"))
 
 # Export the time series plot as a png file
-dev.copy(png, file="figures/PA1_plot2.png", width=480, height=480, bg="transparent")
+dev.copy(png, file="figures/PA1_plot2.png", width=480, height=480)
 dev.off()
 
 # Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
@@ -87,7 +85,7 @@ abline(v=mean_total_steps_per_day2, lwd=2, col="red")
 abline(v=median_total_steps_per_day2, lwd=2, col="blue", lty="dashed")
 
 # Export the histogram as a png file
-dev.copy(png, file="figures/PA1_plot3.png", width=480, height=480, bg="transparent")
+dev.copy(png, file="figures/PA1_plot3.png", width=480, height=480)
 dev.off()
 ```
 
@@ -118,6 +116,6 @@ library(lattice)
 xyplot(steps ~ interval | weekdays, data = weekdays_avg_steps, type="l", layout = c(1, 2))
 
 # Export the histogram as a png file
-dev.copy(png, file="figures/PA1_plot4.png", width=480, height=480, bg="transparent")
+dev.copy(png, file="figures/PA1_plot4.png", width=480, height=480)
 dev.off()
 ```
