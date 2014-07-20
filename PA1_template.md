@@ -47,7 +47,7 @@ abline(v=median_total_steps_per_day, lwd=2, col="blue", lty="dashed")
 
 ```r
 # Export the histogram as a png file
-dev.copy(png, file="figures/PA1_plot1.png", width=480, height=480)
+dev.copy(png, file="figures/PA1_plot1.png", width=480, height=480, bg="white")
 ```
 
 ```
@@ -77,7 +77,7 @@ with(avg_steps_every_5min, plot(interval, steps, type="l"))
 
 ```r
 # Export the time series plot as a png file
-dev.copy(png, file="figures/PA1_plot2.png", width=480, height=480)
+dev.copy(png, file="figures/PA1_plot2.png", width=480, height=480, bg="white")
 ```
 
 ```
@@ -158,7 +158,7 @@ abline(v=median_total_steps_per_day2, lwd=2, col="blue", lty="dashed")
 
 ```r
 # Export the histogram as a png file
-dev.copy(png, file="figures/PA1_plot3.png", width=480, height=480)
+dev.copy(png, file="figures/PA1_plot3.png", width=480, height=480, bg="white")
 ```
 
 ```
@@ -207,7 +207,7 @@ xyplot(steps ~ interval | weekdays, data = weekdays_avg_steps, type="l", layout 
 
 ```r
 # Export the histogram as a png file
-dev.copy(png, file="figures/PA1_plot4.png", width=480, height=480)
+dev.copy(png, file="figures/PA1_plot4.png", width=480, height=480, bg="white")
 ```
 
 ```
