@@ -58,7 +58,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
-<pre class="r"><code># Read a csv file
+<pre class="r"><code># Read a zipped csv file
 activity &lt;- read.csv(unz(&quot;activity.zip&quot;, &quot;activity.csv&quot;), header=TRUE ,sep=&quot;,&quot;)
 
 # Transform the date column type from factor to Date
