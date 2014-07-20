@@ -3,7 +3,7 @@
 ## Loading and preprocessing the data
 
 ```r
-# Read a zipped csv file
+# Read a csv file
 activity <- read.csv(unz("activity.zip", "activity.csv"), header=TRUE ,sep=",")
 
 # Transform the date column type from factor to Date
